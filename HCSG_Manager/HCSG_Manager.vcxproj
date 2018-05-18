@@ -58,6 +58,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\SQLite3Helper;.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -116,8 +117,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SQLite3Helper\CppSQLite3.h" />
+    <ClInclude Include="..\SQLite3Helper\sqlite3.h" />
+    <ClInclude Include="..\SQLite3Helper\SQLite3Helper.h" />
     <ClInclude Include="AttrDlg.h" />
+    <ClInclude Include="BinarySearch.h" />
+    <ClInclude Include="BPlusTree.h" />
     <ClInclude Include="CBDlg.h" />
+    <ClInclude Include="IndexList.h" />
+    <ClInclude Include="ComString.h" />
+    <ClInclude Include="IndexListTest.h" />
+    <ClInclude Include="LinkQueue.h" />
+    <ClInclude Include="RBTree.h" />
+    <ClInclude Include="CSettings.h" />
     <ClInclude Include="DlgSendAwards.h" />
     <ClInclude Include="ItemDlg.h" />
     <ClInclude Include="Local_com.h" />
@@ -131,20 +143,32 @@
     <ClInclude Include="md5.h" />
     <ClInclude Include="MyTabCtrl.h" />
     <ClInclude Include="PlayerListDlg.h" />
+    <ClInclude Include="StructCompare.h" />
+    <ClInclude Include="xTreeTest.h" />
+    <ClInclude Include="RcsManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StoreDlg.h" />
     <ClInclude Include="StructDef.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TTree.h" />
+    <ClInclude Include="utilts.h" />
     <ClInclude Include="Vip.h" />
     <ClInclude Include="XColorStatic.h" />
     <ClInclude Include="XubaoDlg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\SQLite3Helper\CppSQLite3.cpp" />
+    <ClCompile Include="..\SQLite3Helper\SQLite3Helper.cpp" />
     <ClCompile Include="AttrDlg.cpp" />
+    <ClCompile Include="BPlusTreeTest.cpp" />
     <ClCompile Include="CBDlg.cpp" />
+    <ClCompile Include="ComString.cpp" />
+    <ClCompile Include="CSettings.cpp" />
     <ClCompile Include="DlgSendAwards.cpp" />
+    <ClCompile Include="IndexListTest.cpp" />
     <ClCompile Include="ItemDlg.cpp" />
+    <ClCompile Include="LinkQueueTest.cpp" />
     <ClCompile Include="Local_com.cpp" />
     <ClCompile Include="CwarPlayerDlg.cpp" />
     <ClCompile Include="CwarOrgDlg.cpp" />
@@ -156,13 +180,18 @@
     <ClCompile Include="md5.cpp" />
     <ClCompile Include="MyTabCtrl.cpp" />
     <ClCompile Include="PlayerListDlg.cpp" />
+    <ClCompile Include="RBTreeTest.cpp" />
+    <ClCompile Include="RcsManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="StoreDlg.cpp" />
+    <ClCompile Include="TTreeTest.cpp" />
+    <ClCompile Include="utilts.cpp" />
     <ClCompile Include="Vip.cpp" />
     <ClCompile Include="XColorStatic.cpp" />
+    <ClCompile Include="xTreeTest.cpp" />
     <ClCompile Include="XubaoDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +205,11 @@
     <Image Include="..\..\..\..\Users\yqli\Desktop\新建文件夹\皇.ico" />
     <Image Include="res\HCSG_Manager.ico" />
     <Image Include="res\皇.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLite3\SQLite3.vcxproj">
+      <Project>{a7f468fd-6c57-4c3d-b4e5-80bf511ed3c3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

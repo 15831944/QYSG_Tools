@@ -142,7 +142,7 @@ struct ItemDef{
 	CString ID;
 	CString Name;
 };
-#pragma pack() 
+#pragma pack()
 
 #pragma pack(1)
 struct StageDef{

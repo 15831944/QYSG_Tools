@@ -5,87 +5,162 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Tabs-Dlg">
+      <UniqueIdentifier>{69fd3d83-a45e-421f-83e9-cddd6fa68fe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Utilts">
+      <UniqueIdentifier>{b4fcb3c6-4fd8-4f47-a075-0226881230bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SQLite3Helper">
+      <UniqueIdentifier>{c674f4d4-3b0e-4e02-8b44-d61587425f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="源文件\RBTree">
+      <UniqueIdentifier>{30474a5a-69a1-4e1a-a6a8-29a920f0648b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\BPlusTree">
+      <UniqueIdentifier>{7ade3483-98ca-42e9-b9c6-2b0763bda7e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TTree">
+      <UniqueIdentifier>{056efdcb-54ca-4469-98c2-6eec96f1aea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\LinkQueue">
+      <UniqueIdentifier>{31099233-1055-4487-baaa-4fd21fab6f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\xTreeTest">
+      <UniqueIdentifier>{f56daf98-2959-46ed-b6e1-712443e578a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\IndexList">
+      <UniqueIdentifier>{3eee85d1-27be-4582-b618-7f1d55f77e42}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HCSG_Manager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="HCSG_ManagerDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
+      <Filter>MFC头文件</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
+      <Filter>MFC头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>头文件</Filter>
+      <Filter>MFC头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LoginDlg.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="..\SQLite3Helper\CppSQLite3.h">
+      <Filter>源文件\SQLite3Helper</Filter>
     </ClInclude>
-    <ClInclude Include="MyTabCtrl.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="..\SQLite3Helper\sqlite3.h">
+      <Filter>源文件\SQLite3Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SQLite3Helper\SQLite3Helper.h">
+      <Filter>源文件\SQLite3Helper</Filter>
     </ClInclude>
     <ClInclude Include="AttrDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClInclude>
     <ClInclude Include="CBDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="XubaoDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CwarPlayerDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClInclude>
     <ClInclude Include="CwarOrgDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClInclude>
-    <ClInclude Include="XColorStatic.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FontSize.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StructDef.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="LogDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Vip.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Local_com.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerListDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StoreDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="md5.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="CwarPlayerDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClInclude>
     <ClInclude Include="DlgSendAwards.h">
-      <Filter>头文件</Filter>
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="LogDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerListDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="Vip.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="XubaoDlg.h">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="FontSize.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTabCtrl.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="XColorStatic.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="HCSG_Manager.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HCSG_ManagerDlg.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Local_com.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StructDef.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RcsManager.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CSettings.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComString.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="utilts.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="RBTree.h">
+      <Filter>源文件\RBTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BPlusTree.h">
+      <Filter>源文件\BPlusTree</Filter>
+    </ClInclude>
+    <ClInclude Include="TTree.h">
+      <Filter>源文件\TTree</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkQueue.h">
+      <Filter>源文件\LinkQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="xTreeTest.h">
+      <Filter>源文件\xTreeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="StructCompare.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <Filter>源文件\Utilts</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexList.h">
+      <Filter>源文件\IndexList</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexListTest.h">
+      <Filter>源文件\IndexList</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -95,59 +170,95 @@
     <ClCompile Include="HCSG_ManagerDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LoginDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MyTabCtrl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AttrDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CBDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="XubaoDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CwarPlayerDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CwarOrgDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="XColorStatic.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FontSize.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LogDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Vip.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Local_com.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerListDlg.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="CwarOrgDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClCompile>
-    <ClCompile Include="ItemDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="StoreDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="md5.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="CwarPlayerDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
     </ClCompile>
     <ClCompile Include="DlgSendAwards.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="LogDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerListDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="XubaoDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="Vip.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="XColorStatic.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtrl.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="FontSize.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CBDlg.cpp">
+      <Filter>源文件\Tabs-Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SQLite3Helper\CppSQLite3.cpp">
+      <Filter>源文件\SQLite3Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SQLite3Helper\SQLite3Helper.cpp">
+      <Filter>源文件\SQLite3Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MFC头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RcsManager.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CSettings.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComString.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="utilts.cpp">
+      <Filter>源文件\Utilts</Filter>
+    </ClCompile>
+    <ClCompile Include="RBTreeTest.cpp">
+      <Filter>源文件\RBTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BPlusTreeTest.cpp">
+      <Filter>源文件\BPlusTree</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkQueueTest.cpp">
+      <Filter>源文件\LinkQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="TTreeTest.cpp">
+      <Filter>源文件\TTree</Filter>
+    </ClCompile>
+    <ClCompile Include="xTreeTest.cpp">
+      <Filter>源文件\xTreeTest</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexListTest.cpp">
+      <Filter>源文件\IndexList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

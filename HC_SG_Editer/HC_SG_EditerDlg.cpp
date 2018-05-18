@@ -159,14 +159,17 @@ HCURSOR CHC_SG_EditerDlg::OnQueryDragIcon()
 void CHC_SG_EditerDlg::InitTabMain()
 {
 	CRect tabRect;   // 标签控件客户区的位置和大小
-	m_TabMain.InsertItem(0, _T("爆率修改"));
-	m_TabMain.InsertItem(1, _T("王刷新"));
-	m_TabMain.InsertItem(2, _T("Players修改"));
+	int tab_index = 0;
+	m_TabMain.InsertItem(tab_index, _T("爆率修改"));
+	Common::DlgDrop = m_TabMain.InsetPage(tab_index++, IDD_DROP_DIALOG, new CDropItemDlg);
+	m_TabMain.InsertItem(tab_index, _T("王刷新"));
+	Common::DlgArmy = m_TabMain.InsetPage(tab_index++, IDD_ARMY_DIALOG, new CArmyDlg);
 
-
-	Common::DlgDrop = m_TabMain.InsetPage(0, IDD_DROP_DIALOG, new CDropItemDlg);
-	Common::DlgArmy = m_TabMain.InsetPage(1, IDD_ARMY_DIALOG, new CArmyDlg);
-	Common::DlgPlayer = m_TabMain.InsetPage(2, IDD_PLAYERS_DIALOG, new CPlayersDlg);
+	if (PathIsDirectory("D:\\sgserver\\"))
+	{
+		m_TabMain.InsertItem(tab_index, _T("Players修改"));
+		Common::DlgPlayer = m_TabMain.InsetPage(tab_index++, IDD_PLAYERS_DIALOG, new CPlayersDlg);
+	}	
 
 	m_TabMain.SetNumberOfPages(0);
 	m_TabMain.SetCurrentPage(0);

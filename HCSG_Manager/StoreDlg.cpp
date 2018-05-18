@@ -89,7 +89,6 @@ void CStoreDlg::InitItemList()
 	for(i=0;i < LCurSaveStores->GetCount();i++)
 	{
 		TmpSaveStores = LCurSaveStores->GetNext(pos);
-		Sleep(1);
 		// 第一个角色
 		strAccName = "";
 		strAccount = "";
@@ -149,7 +148,6 @@ void CStoreDlg::InitItemList()
 			m_CListCtrlAcc.SetItemText(nItem, 1, Common::Big2GB((LPSTR)(LPCTSTR)strAccName));
 			m_CListCtrlAcc.SetItemText(nItem, 2, strGold);
 		}
-		Sleep(1);
 		// 第二个角色
 		strAccName = "";
 		strAccount = "";
@@ -209,7 +207,6 @@ void CStoreDlg::InitItemList()
 			m_CListCtrlAcc.SetItemText(nItem, 1, Common::Big2GB((LPSTR)(LPCTSTR)strAccName));
 			m_CListCtrlAcc.SetItemText(nItem, 2, strGold);
 		}
-		Sleep(1);
 		// 第三个角色
 		strAccName = "";
 		strAccount = "";
@@ -411,7 +408,6 @@ void CStoreDlg::OnBnClickedButtonOutput()
 	int nrow = m_CListCtrlAcc.GetItemCount();//取行数
 	for(i = 0; i < nrow; i++)
 	{
-		Sleep(1);
 		strAccount = m_CListCtrlAcc.GetItemText(i, 0);
 		strAccName = m_CListCtrlAcc.GetItemText(i, 1);
 		strGold = m_CListCtrlAcc.GetItemText(i, 2);

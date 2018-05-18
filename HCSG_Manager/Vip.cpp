@@ -882,7 +882,6 @@ void CVip::SendPointToVip()
 	int nrow = m_CListCtrlVipAcc.GetItemCount();//取行数
 	for(i=0; i< nrow; i++)
 	{
-		Sleep(1);
 		strAccount = m_CListCtrlVipAcc.GetItemText(i, 0);
 		// 确认帐号是否存在
 		pos = LCurGameAcc->GetHeadPosition();
@@ -890,7 +889,6 @@ void CVip::SendPointToVip()
 		{
 			GameAcc TmpGameAcc = LCurGameAcc->GetNext(pos);
 			CString AccountID = TmpGameAcc.account;
-			Sleep(1);
 			if(AccountID == strAccount)
 			{
 				break;
@@ -967,7 +965,6 @@ void CVip::SendPointToVip()
 			strItems.Add(strTemp[28]);
 			strItems.Add(strTemp[30]);
 		}
-		Sleep(1);
 		if(nSendPoint > 0)
 		{
 			if(Common::m_pConnection == NULL)
@@ -988,7 +985,6 @@ void CVip::SendPointToVip()
 				continue;
 			}
 		}
-		Sleep(1);
 		if(strItems.GetCount() > 0)
 		{
 			if(Common::m_pConnXb == NULL)
@@ -1030,7 +1026,6 @@ void CVip::SendPointToVip()
 	nrow = m_CListCtrlVipAcc.GetItemCount();//取行数
 	for(i=nrow-1; i>=0; i--)
 	{
-		Sleep(1);
 		strDate = m_CListCtrlVipAcc.GetItemText(i, 2);
 		if(strDate == "0")
 		{
@@ -1044,7 +1039,6 @@ void CVip::SendPointToVip()
 		}
 	}
 
-	Sleep(1);
 	ReadVipList();
 
 	nrow = m_CListCtrlVipAcc.GetItemCount();//取行数
@@ -1054,7 +1048,6 @@ void CVip::SendPointToVip()
 	m_CListCtrlVipAcc.DeleteItem(i);
 	for(i=0; i< nrow; i++)
 	{
-		Sleep(1);
 		strAccount = m_CListCtrlVipAcc.GetItemText(i, 0);
 		strVipType = m_CListCtrlVipAcc.GetItemText(i, 1);
 		strDate = m_CListCtrlVipAcc.GetItemText(i, 2);
@@ -1066,9 +1059,7 @@ void CVip::SendPointToVip()
 		WritePrivateProfileString("VIPLIST",Key,StrValue,des);
 		ReleaseMutex(Common::hMutex);
 	}
-	Sleep(1);
 	OnBnClickedButtonUpdate();
-	Sleep(1);
 	OnEnChangeEditAcc();
 
 	Common::Log(Info, "发放VIP代币和物品结束！");

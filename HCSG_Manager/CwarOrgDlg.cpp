@@ -211,7 +211,6 @@ void CCwarOrgDlg::GetOrganize()
 	{
 		struct OrganizeAttr TmpOrganizeAttr = LCurOrganizeAttr->GetNext(pos);  //获得当前军团的属性
 		struct CwarAwards TmpCwarAwards;
-		Sleep(1);
 		pos2 = LCurStageDef->GetHeadPosition();   // 通过地图ID获得地图名称，用来和监视城市进行对比
 		for (int j=0;j < LCurStageDef->GetCount();j++)
 		{
@@ -1030,7 +1029,6 @@ void CCwarOrgDlg::PaymentOfAwards()
 
 	for(int i = 0; i < iRowCountAcc; i++)
 	{
-		Sleep(1);
 		CString StageName, AwardsTimes;
 		strAccount = m_CListCtrlAcc.GetItemText(i, 1); // 获得团长角色账户
 		StageName = m_CListCtrlAcc.GetItemText(i, 3); // 获得占领城市名称
@@ -1083,7 +1081,6 @@ void CCwarOrgDlg::PaymentOfAwards()
 				int i = _ttoi(AwardsTimes);
 				for(;i>0;i--)
 				{
-					Sleep(1);
 					if(!Common::SendXubao(strAccount, &ItemList))
 					{
 						Common::Log(Error, "发放国战军团<时间>奖励失败");
@@ -1137,7 +1134,6 @@ void CCwarOrgDlg::PaymentOfAwards_1()
 	{
 		struct OrganizeAttr TmpOrganizeAttr = LCurOrganizeAttr->GetNext(pos);  //获得当前军团的属性
 		struct CwarAwards TmpCwarAwards;
-		Sleep(1);
 		pos2 = LCurStageDef->GetHeadPosition();   // 通过地图ID获得地图名称，用来和监视城市进行对比
 		for (int j=0;j < LCurStageDef->GetCount();j++)
 		{

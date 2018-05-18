@@ -379,7 +379,7 @@ BOOL Common::SaveAwardsConfig()
 		DeleteFile(strFilePath);
 	}
 
-	//调用各个Tab的配置保存方法
+	//调用各个Tab的配置保存方法, 调整成使用sqlite3，用三张表解决问题
 	::SendMessage(Common::DlgCwarOrg, WM_SAVECWARORGAWARDS, 0, (LPARAM)(&strFilePath));
 	::SendMessage(Common::DlgCwarPlayer, WM_SAVECWARPLAYERAWARDS, 0, (LPARAM)(&strFilePath));
 	::SendMessage(Common::DlgCB, WM_SAVECBAWARDS, 0, (LPARAM)(&strFilePath));
@@ -939,27 +939,18 @@ void Common::SystemInit()
 		hMutex = NULL;
 	}
 
-	// 创建互斥量
-	hMutex = CreateMutex(NULL, FALSE, "Hcsg_Gm_Mutex");   // 不知道怎么检查创建结果
-	Sleep(1);
+	// 创建路径结构
 	ConnToSQLServer();
-	Sleep(1);
 	GetItemDef();
-	Sleep(1);
 	GetStageDef();
-	Sleep(1);
 	GetUpdateCLists();
-	Sleep(1);
 	GetServerConfig();
 }
 
 void Common::GetUpdateCLists()
 {
-	Sleep(1);
 	GetGameAccFormDB();
-	Sleep(1);
 	GetAccAttr();
-	Sleep(1);
 	GetOrganizeAttr();
 }
 
@@ -1652,7 +1643,6 @@ BOOL Common::GetGameAccFormDB()
 
 		while(!m_pRecordset->ADOEOF)
 		{
-			Sleep(1);
 			strValue = Common::m_pRecordset->GetCollect("account");
 			TmpGameAcc.account = (strValue.vt != VT_NULL) ? strValue : "";
 			TmpGameAcc.account.MakeLower();
@@ -1966,7 +1956,6 @@ void Common::GetSaveItems()
 	ret = iar.Read(Head,sizeof(Head));
 	for(;ret > 0;)
 	{
-		Sleep(1);
 		ret = iar.Read(&TmpSaveItems,sizeof(TmpSaveItems));
 		if(ret <= 0) break;
 		LSaveItems.AddTail(TmpSaveItems);
@@ -2009,7 +1998,6 @@ void Common::GetSaveStores()
 	ret = iar.Read(Head,sizeof(Head));
 	for(;ret > 0;)
 	{
-		Sleep(1);
 		ret = iar.Read(&TmpSaveStores,sizeof(TmpSaveStores));
 		if(ret <= 0) break;
 		LSaveStores.AddTail(TmpSaveStores);

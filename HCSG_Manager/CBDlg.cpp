@@ -244,7 +244,6 @@ void CCBDlg::GetHores()
 	//ÖðÐÐ¶ÁÈ¡×Ö·û´®
 	while( StdFile.ReadString( szLine ) )
 	{
-		Sleep(1);
 		strResult.RemoveAll();
 		szLine.Replace('\t', ' ');
 		szLine.Replace(_T(" "), _T(""));
@@ -339,7 +338,6 @@ void CCBDlg::GetHores()
 		m_CListCtrlAcc.SetItemText(nItem, 2, _T(Common::Big2GB((LPSTR)(LPCTSTR)TmpHistoryCbHeroes.Name)));
 		m_CListCtrlAcc.SetItemText(nItem, 3, _T(TmpHistoryCbHeroes.Honor));
 		m_CListCtrlAcc.SetItemText(nItem, 4, _T(TmpHistoryCbHeroes.Kills));
-		Sleep(1);
 	}
 }
 
@@ -1066,7 +1064,6 @@ void CCBDlg::PaymentOfAwards()
 
 		for (int j=0 ; j<iRowCountConfig ; j++ )
 		{
-			Sleep(1);
 			CString strTemp, strTemp2;
 			strTemp = m_CListCtrlConfig.GetItemText(j,0);
 			strTemp2 = m_CListCtrlConfig.GetItemText(j,1);

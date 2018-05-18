@@ -125,6 +125,9 @@ BOOL CHCSG_ManagerDlg::OnInitDialog()
 	// TODO: 在此添加额外的初始化代码
 	::CoInitialize(NULL);
 
+	//CSqlite3Helper *Sqlite3DB = new CSqlite3Helper();
+	//Sqlite3DB->Open();
+
 	LicenseCheck();
  
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -199,9 +202,13 @@ void CHCSG_ManagerDlg::LicenseCheck()
 
 void CHCSG_ManagerDlg::ServerStart()
 {
+
 	//AfxMessageBox("初始化 - 读取配置信息");
 	//Common::ReadConfig();
 	//InitCurConfig();
+
+	//InitTabMain();
+
 	//Common::IsEnConn = TRUE;
 	//Common::SystemInit();
 
@@ -211,25 +218,25 @@ void CHCSG_ManagerDlg::ServerStart()
 // 	}
 
 	//AfxMessageBox("初始化 - 读取配置信息结束");
-	InitTabMain();
+	
 	//AfxMessageBox("添加子窗口");
 	Common::Log(Info, "Server Start!!");
 
-// 	if(Common::IsDbConct)
-// 	{
-// 		m_CButtonConct.SetWindowText("断开连接");
-// 		m_CStatic_stat.SetWindowText("已连接数据库！");
-// 		m_CStatic_stat.SetTextColor(RGB(0,0,205));
-// 		Common::IsDbConct = TRUE;
-// 	}
-// 	else
-// 	{
-// 		m_CButtonConct.SetWindowText("点击连接");
-// 		m_CStatic_stat.SetWindowText("未连接数据库！");
-// 		m_CStatic_stat.SetTextColor(RGB(255,0,0));
-// 		Common::m_pConnection = NULL;
-// 		Common::IsDbConct = FALSE;
-// 	}
+	if(Common::IsDbConct)
+	{
+		m_CButtonConct.SetWindowText("断开连接");
+		m_CStatic_stat.SetWindowText("已连接数据库！");
+		m_CStatic_stat.SetTextColor(RGB(0,0,205));
+		Common::IsDbConct = TRUE;
+	}
+	else
+	{
+		m_CButtonConct.SetWindowText("点击连接");
+		m_CStatic_stat.SetWindowText("未连接数据库！");
+		m_CStatic_stat.SetTextColor(RGB(255,0,0));
+		Common::m_pConnection = NULL;
+		Common::IsDbConct = FALSE;
+	}
 
 	//SetTimer(TIMER_UPDATE, 60 * 1000, 0);  // 每分钟自动保存一下配置
 }
@@ -361,8 +368,8 @@ void CHCSG_ManagerDlg::OnBnClickedButtonConct()
 		m_CeditIP.GetWindowText(Common::SQLServer);
 		m_CeditAcc.GetWindowText(Common::SQLAccount);
 		m_CeditPw.GetWindowText(Common::SQLPassWord);
-		m_CEditTableAccountName.SetWindowText(Common::TableAccountName);
-		m_CEditTableXbName.SetWindowText(Common::TableXbName);
+		m_CEditTableAccountName.GetWindowText(Common::TableAccountName);
+		m_CEditTableXbName.GetWindowText(Common::TableXbName);
 		Common::IsEnConn = TRUE;
 		Common::ConnToSQLServer();
 		if(!Common::IsDbConct)
@@ -371,20 +378,20 @@ void CHCSG_ManagerDlg::OnBnClickedButtonConct()
 			Common::IsEnConn = FALSE;
 			return;
 		}
-// 		m_CButtonConct.SetWindowText("断开连接");
-// 		m_CStatic_stat.SetWindowText("已连接数据库！");
-// 		m_CStatic_stat.SetTextColor(RGB(0,0,205));
-// 		Common::IsEnConn = TRUE;
-// 		Common::SaveConfig();
+		m_CButtonConct.SetWindowText("断开连接");
+		m_CStatic_stat.SetWindowText("已连接数据库！");
+		m_CStatic_stat.SetTextColor(RGB(0,0,205));
+		Common::IsEnConn = TRUE;
+		Common::SaveConfig();
 		
 	}
 	else
 	{
-// 		Common::ConnToSQLServer();
-// 		m_CButtonConct.SetWindowText("点击连接");
-// 		m_CStatic_stat.SetWindowText("未连接数据库！");
-// 		m_CStatic_stat.SetTextColor(RGB(255,0,0));
-// 		Common::IsEnConn = FALSE;
+		Common::ConnToSQLServer();
+		m_CButtonConct.SetWindowText("点击连接");
+		m_CStatic_stat.SetWindowText("未连接数据库！");
+		m_CStatic_stat.SetTextColor(RGB(255,0,0));
+		Common::IsEnConn = FALSE;
 	}
 }
 
@@ -425,17 +432,17 @@ void CHCSG_ManagerDlg::OnBnClickedButtonSacn()
 void CHCSG_ManagerDlg::OnBnClickedButtonEnable()
 {
 	// TODO: 在此添加控件通知处理程序代码
-// 	if(Common::SanGuoServerIsRuning)
-// 	{
-// 		m_CButtonEnable.SetWindowText("允许奖励");
-// 		Common::SanGuoServerIsRuning = FALSE;
-// 	}
-// 	else
-// 	{
-// 		m_CButtonEnable.SetWindowText("禁止奖励");
-// 		Common::SanGuoServerIsRuning = TRUE;
-// 		Common::SaveConfig();
-// 	}
+	if(Common::SanGuoServerIsRuning)
+	{
+		m_CButtonEnable.SetWindowText("允许奖励");
+		Common::SanGuoServerIsRuning = FALSE;
+	}
+	else
+	{
+		m_CButtonEnable.SetWindowText("禁止奖励");
+		Common::SanGuoServerIsRuning = TRUE;
+		Common::SaveConfig();
+	}
 }
 
 

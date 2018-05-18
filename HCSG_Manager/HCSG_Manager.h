@@ -10,6 +10,10 @@
 
 #include "resource.h"		// 主符号
 #include "Local_com.h"
+#include "SQLite3Helper.h"
+#include "RcsManager.h"
+#include "CSettings.h"
+#include "xTreeTest.h"
 
 #include "CwarPlayerDlg.h"
 #include "CwarOrgDlg.h"
@@ -23,6 +27,10 @@
 #include "ItemDlg.h"
 #include "StoreDlg.h"
 #include "DlgSendAwards.h"
+
+// 定义全局变量
+extern CSettings* g_pSettings;
+extern CRcsManager *g_pCRcsManager;
 
 // CHCSG_ManagerApp:
 // 有关此类的实现，请参阅 HCSG_Manager.cpp

@@ -5,11 +5,15 @@
 #include "stdafx.h"
 #include "HCSG_Manager.h"
 #include "HCSG_ManagerDlg.h"
+#include "IndexListTest.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+// 定义全局变量
+CSettings* g_pSettings;
+CRcsManager *g_pCRcsManager;
 
 // CHCSG_ManagerApp
 
@@ -68,6 +72,16 @@ BOOL CHCSG_ManagerApp::InitInstance()
 		return FALSE;
 	}
 
+	IndexListTest();
+
+	extern	int TTreeTest();
+
+	//TTreeTest();
+	//RBTreeTest();
+
+	g_pSettings = new CSettings();
+	g_pCRcsManager = new CRcsManager();
+	g_pCRcsManager->SyncSQLite3db();
 
 	AfxEnableControlContainer();
 

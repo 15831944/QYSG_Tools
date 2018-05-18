@@ -196,7 +196,6 @@ void CCwarPlayerDlg::GetHores()
 	//逐行读取字符串
 	while( StdFile.ReadString( szLine ) )
 	{
-		Sleep(1);
 		strResult.RemoveAll();
 		szLine.Replace('\t', ' ');
 		szLine.Replace(_T(" "), _T(""));
@@ -273,7 +272,6 @@ void CCwarPlayerDlg::GetHores()
 	for (int i=0;i < LCwarHeroes.GetCount();i++)
 	{
 		struct CwarHeroes TmpCwarHeroes = LCwarHeroes.GetNext(pos);
-		Sleep(1);
 		int nrow = m_CListCtrlAcc.GetItemCount();//取行数
 		int nItem = m_CListCtrlAcc.InsertItem(nrow+1, _T(""));
 		CString ForItoStr;
@@ -1040,7 +1038,6 @@ void CCwarPlayerDlg::PaymentOfAwards()
 	{
 		m_CEditMinKills.GetWindowText(Common::m_CbMinKills);
 		m_CEditMinHonors.GetWindowText(Common::m_CbMinHonors);
-		Sleep(1);
 		strAccount = m_CListCtrlAcc.GetItemText(i, 1); // 获得角色账户
 		nRanking = _ttoi(m_CListCtrlAcc.GetItemText(i, 0)); // 获得排名
 
@@ -1054,7 +1051,6 @@ void CCwarPlayerDlg::PaymentOfAwards()
 		
 		for (int j=0 ; j<iRowCountConfig ; j++ )
 		{
-			Sleep(1);
 			strTemp = m_CListCtrlConfig.GetItemText(j,0);
 			strTemp2 = m_CListCtrlConfig.GetItemText(j,1);
 			if(_ttoi(strTemp) <= nRanking && _ttoi(strTemp2) >= nRanking)

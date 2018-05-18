@@ -1978,6 +1978,8 @@ void Common::GetDrops()
 			int nPos = temp11.Find(strGap);
 			CString strLeft = _T("");
 			temp11 = temp11.Right(temp11.GetLength() - nPos - 1);
+			temp11.Replace("Item", "item");
+			temp11.Replace("ITEM", "item");
 			TempDropsRange.DropRange = temp11;
 
 			nPos = szLine.Find(strGap);
